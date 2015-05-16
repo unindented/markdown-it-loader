@@ -25,14 +25,14 @@
   },
 
   "dependencies": {
-    "markdown-it":  "^3.0.4",
-    "highlight.js": "^8.4.0"
+    "markdown-it":  "^4.2",
+    "highlight.js": "^8.5"
   },
 
   "devDependencies": {
     "nodeunit":        "^0.9",
-    "cheerio":         "^0.18",
-    "markdown-it-sub": "^0.1.0",
-    "markdown-it-sup": "^0.1.0"
+    "cheerio":         "^0.19",
+    "markdown-it-sub": "^1.0",
+    "markdown-it-sup": "^1.0"
   }
 }
