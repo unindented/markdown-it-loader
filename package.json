@@ -1,37 +1,31 @@
 {
-  "name":        "markdown-it-loader",
+  "name": "markdown-it-loader",
   "description": "Parse source as Markdown.",
-  "version":     "0.2.0",
-
+  "version": "0.2.0",
   "author": {
-    "name":  "Daniel Perez Alvarez",
+    "name": "Daniel Perez Alvarez",
     "email": "unindented@gmail.com",
-    "url":   "http://unindented.org/"
+    "url": "http://unindented.org/"
   },
-
   "repository": {
     "type": "git",
-    "url":  "git://github.com/unindented/markdown-it-loader.git"
+    "url": "git://github.com/unindented/markdown-it-loader.git"
   },
-
   "keywords": [
     "markdown-it",
     "markdown",
     "webpack"
   ],
-
   "scripts": {
     "test": "./node_modules/.bin/nodeunit test/loader.js"
   },
-
   "dependencies": {
-    "markdown-it":  "^5.0",
-    "highlight.js": "^8.8"
+    "markdown-it": "^5.0",
+    "highlight.js": "^9.0.0"
   },
-
   "devDependencies": {
-    "nodeunit":        "^0.9",
-    "cheerio":         "^0.19",
+    "nodeunit": "^0.9",
+    "cheerio": "^0.19",
     "markdown-it-sub": "^1.0",
     "markdown-it-sup": "^1.0"
   }
