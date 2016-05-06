@@ -36,6 +36,28 @@ module.exports = {
 };
 ```
 
+If you need to use a plugin that requires extra options such as [markdown-it-container](https://github.com/markdown-it/markdown-it-container), you can use the following syntax
+
+```js
+var container = require('markdown-it-container');
+var subscript = require('markdown-it-sub');
+var superscript = require('markdown-it-sup');
+
+module.exports = {
+  module: {
+    loaders: [{
+      test:   /\.md/,
+      loader: 'markdown-it'
+    }]
+  },
+
+  'markdown-it': {
+    preset: 'default',
+    typographer: true,
+    use: [subscript, superscript, [container, "contained"]]
+  }
+};
+```
 
 ## Meta
 
@@ -46,6 +68,7 @@ module.exports = {
 ## Contributors
 
 * Daniel Perez Alvarez ([unindented@gmail.com](mailto:unindented@gmail.com))
+* Ben Sudbury ([ben@pvlighthouse.com](mailto:ben@pvlighthouse.com))
 
 
 ## License
