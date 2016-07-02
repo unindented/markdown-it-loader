@@ -1,12 +1,17 @@
 {
   "name": "markdown-it-loader",
   "description": "Parse source as Markdown.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "Daniel Perez Alvarez",
     "email": "unindented@gmail.com",
     "url": "http://unindented.org/"
   },
+  "contributors": [{
+	  "name": "Ben Sudbury",
+	  "email": "ben@lighthouselogic.com.au",
+	  "url": "http://www.lighthouselogic.com/"
+	}],
   "repository": {
     "type": "git",
     "url": "git://github.com/unindented/markdown-it-loader.git"
@@ -24,9 +29,10 @@
     "highlight.js": "^9.0.0"
   },
   "devDependencies": {
-    "nodeunit": "^0.9",
     "cheerio": "^0.20.0",
+    "markdown-it-container": "^2.0.0",
     "markdown-it-sub": "^1.0",
-    "markdown-it-sup": "^1.0"
+    "markdown-it-sup": "^1.0",
+    "nodeunit": "^0.9"
   }
 }
