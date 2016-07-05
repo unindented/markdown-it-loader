@@ -56,7 +56,6 @@
   "disallowMixedSpacesAndTabs": true,
   "disallowTrailingWhitespace": true,
   "disallowTrailingComma": true,
-  "requireKeywordsOnNewLine": ["else"],
   "requireLineFeedAtFileEnd": true,
   "maximumLineLength": 100,
   "requireCapitalizedConstructors": true,

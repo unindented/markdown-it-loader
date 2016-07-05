@@ -40,7 +40,12 @@ module.exports = function (source) {
 
   if (plugins) {
     plugins.forEach(function (plugin) {
-      parser.use(plugin);
+      if (Array.isArray(plugin)) {
+        // Allow array of options to be passed.
+        parser.use.apply(parser, plugin);
+      } else {
+        parser.use(plugin);
+      }
     });
   }
 

@@ -1,6 +1,7 @@
 var cheerio = require('cheerio');
 var subscript = require('markdown-it-sub');
 var superscript = require('markdown-it-sup');
+var container = require('markdown-it-container');
 var loader = require('../index.js');
 var source = '# Header';
 var sourceWithLink = 'Visit http://unindented.org!';
@@ -41,6 +42,16 @@ module.exports.test = {
     var $ = cheerio.load(loader.call(context, sourceWithPlugins));
     test.equal($('sub').length, 1);
     test.equal($('sup').length, 1);
+    test.done();
+  },
+
+  'allows plugin options': function (test) {
+    var sourceWithContainer = sourceWithPlugins + '\n ::: contained \n inside container \n :::';
+    var context = mock({use: [[container, 'contained'], subscript, superscript]});
+    var $ = cheerio.load(loader.call(context, sourceWithContainer));
+    test.equal($('sub').length, 1);
+    test.equal($('sup').length, 1);
+    test.equal($('.contained').length, 1);
     test.done();
   },
 
