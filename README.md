@@ -2,11 +2,13 @@
 
 Parses source as Markdown using the awesome [markdown-it](https://github.com/markdown-it/markdown-it) parser.
 
+By default, `markdown-it-loader` will highlight code blocks using [highlight.js](https://www.npmjs.com/package/highlight.js).
+
 
 ## Installation
 
 ```sh
-$ npm install --save markdown-it-loader
+$ npm install --save markdown-it-loader markdown-it highlight.js
 ```
 
 
