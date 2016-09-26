@@ -21,7 +21,7 @@
     "test": "./node_modules/.bin/nodeunit test/loader.js"
   },
   "dependencies": {
-    "markdown-it": "^7.0.0",
+    "markdown-it": "^8.0.0",
     "highlight.js": "^9.0.0"
   },
   "devDependencies": {
