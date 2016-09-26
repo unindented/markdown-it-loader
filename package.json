@@ -1,7 +1,7 @@
 {
   "name": "markdown-it-loader",
   "description": "Parse source as Markdown.",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "author": {
     "name": "Daniel Perez Alvarez",
     "email": "unindented@gmail.com",
