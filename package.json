@@ -28,7 +28,7 @@
   "devDependencies": {
     "cheerio": "^0.22.0",
     "eslint": "^3.0.0",
-    "eslint-config-standard": "^6.0.0",
+    "eslint-config-standard": "^7.0.0",
     "eslint-plugin-promise": "^3.0.0",
     "eslint-plugin-standard": "^2.0.0",
     "highlight.js": "^9.0.0",
