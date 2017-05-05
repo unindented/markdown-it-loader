@@ -1,4 +1,4 @@
-# markdown-it loader for webpack [![Version](https://img.shields.io/npm/v/markdown-it-loader.svg)](https://www.npmjs.com/package/markdown-it-loader) [![Build Status](https://img.shields.io/travis/unindented/markdown-it-loader.svg)](http://travis-ci.org/unindented/markdown-it-loader) [![Dependency Status](https://img.shields.io/gemnasium/unindented/markdown-it-loader.svg)](https://gemnasium.com/unindented/markdown-it-loader)
+# markdown-it loader for webpack [![Version](https://img.shields.io/npm/v/markdown-it-loader.svg)](https://www.npmjs.com/package/markdown-it-loader) [![Build Status](https://img.shields.io/travis/unindented/markdown-it-loader.svg)](http://travis-ci.org/unindented/markdown-it-loader)
 
 Parses source as Markdown using the awesome [markdown-it](https://github.com/markdown-it/markdown-it) parser.
 
