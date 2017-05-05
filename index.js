@@ -1,37 +1,31 @@
 var markdown = require('markdown-it')
 var hljs = require('highlight.js')
-
-var extend = function (obj, source) {
-  var prop
-
-  for (prop in source) {
-    if (source.hasOwnProperty(prop)) {
-      obj[prop] = source[prop]
-    }
-  }
-
-  return obj
-}
+var loaderUtils = require('loader-utils')
 
 module.exports = function (source) {
   this.cacheable()
 
-  var opts = extend({
-    preset: 'default',
-    highlight: function (str, lang) {
-      if (lang && hljs.getLanguage(lang)) {
+  var opts = Object.assign(
+    {
+      preset: 'default',
+      highlight: function (str, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+          try {
+            return hljs.highlight(lang, str).value
+          } catch (err) {}
+        }
+
         try {
-          return hljs.highlight(lang, str).value
+          return hljs.highlightAuto(str).value
         } catch (err) {}
+
+        return ''
       }
-
-      try {
-        return hljs.highlightAuto(str).value
-      } catch (err) {}
-
-      return ''
-    }
-  }, this.options['markdown-it'])
+    },
+    this['markdown-it'],
+    this.options['markdown-it'],
+    loaderUtils.getOptions(this)
+  )
 
   var plugins = opts.use
   delete opts.use
