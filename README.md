@@ -26,14 +26,13 @@ module.exports = {
   module: {
     loaders: [{
       test:   /\.md/,
-      loader: 'markdown-it'
+      loader: 'markdown-it',
+      options: {
+        preset: 'default',
+        typographer: true,
+        use: [subscript, superscript]
+      }
     }]
-  },
-
-  'markdown-it': {
-    preset: 'default',
-    typographer: true,
-    use: [subscript, superscript]
   }
 };
 ```
@@ -49,14 +48,13 @@ module.exports = {
   module: {
     loaders: [{
       test:   /\.md/,
-      loader: 'markdown-it'
+      loader: 'markdown-it',
+      options: {
+        preset: 'default',
+        typographer: true,
+        use: [subscript, superscript, [container, "contained"]]
+      }
     }]
-  },
-
-  'markdown-it': {
-    preset: 'default',
-    typographer: true,
-    use: [subscript, superscript, [container, "contained"]]
   }
 };
 ```
