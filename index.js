@@ -22,8 +22,6 @@ module.exports = function (source) {
         return ''
       }
     },
-    this['markdown-it'],
-    this.options['markdown-it'],
     loaderUtils.getOptions(this)
   )
 
