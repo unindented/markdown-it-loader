@@ -9,16 +9,10 @@ var sourceWithPlugins = 'Sub H~2~O / Sup ^13^C'
 var sourceWithCode = '```js\nconsole.log("Hello World");/n```'
 
 var mock = function (opts) {
-  var result = {
+  return {
     cacheable: function () {},
-    options: {}
+    query: opts
   }
-
-  if (opts) {
-    result.options['markdown-it'] = opts
-  }
-
-  return result
 }
 
 module.exports.test = {
