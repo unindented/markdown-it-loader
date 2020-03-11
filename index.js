@@ -27,6 +27,10 @@ module.exports = function (source) {
 
   var plugins = opts.use
   delete opts.use
+  var tokenize = opts.tokenize
+  delete opts.tokenize
+  var env = opts.env || {}
+  delete opts.env
 
   var parser = markdown(opts.preset, opts)
 
@@ -41,5 +45,10 @@ module.exports = function (source) {
     })
   }
 
-  return parser.render(source)
+  if (state) {
+    var tokens = this.parse(source, env);
+    return {default: parser.renderer.render(tokens, parser.options, env), tokens}
+  } else {
+    return parser.render(source, env)
+  }
 }
