@@ -45,7 +45,7 @@ module.exports = function (source) {
     })
   }
 
-  if (state) {
+  if (tokenize) {
     var tokens = this.parse(source, env);
     return {default: parser.renderer.render(tokens, parser.options, env), tokens}
   } else {
